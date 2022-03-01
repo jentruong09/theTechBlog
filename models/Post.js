@@ -15,11 +15,11 @@ Post.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        post_text: {
+        post: {
             type: DataTypes.TEXT,
             allowNull: false,
             validate: {
-                len: [1]
+                len: [5]
             }
         },
         user_id: {
