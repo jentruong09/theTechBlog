@@ -1,0 +1,25 @@
+
+{{#if posts.length}}
+<div class="your-posts">
+    <ol>
+        <div class="card" style="width: 50rem;">
+            {{#each posts as |post|}}
+            <ul>
+                <div class="post-body card-body">
+                    <div class="card-title">
+                        <a href="/post/{{id}}">{{title}}</a>
+                    </div>
+                    <div class="info card-subtitle text-muted">
+                        By {{user.username}} Posted on {{format_date created_at}}
+                    </div>
+                </div>
+                <button type="submit" href="/dashboard/edit/{{post.id}}" class="edit btn btn-primary">Edit</button>
+            </ul>
+        </div>
+    </ol>
+</div>
+{{/if}}
+
+<div class="new-post">
+    <button type="submit" href="/dashboard/posting" class="create btn btn-primary"> + New Post </button>
+</div>

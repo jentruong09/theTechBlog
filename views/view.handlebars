@@ -1,0 +1,18 @@
+
+{{>post-body post}}
+
+{{#if loggedIn}}
+<form class="form-comment">
+    <div class="form-group">
+        <label for="Comments">Comment</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <div class="col-auto my-1">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+
+{{/if}}
+
+{{>comment-body post.comments}}
+

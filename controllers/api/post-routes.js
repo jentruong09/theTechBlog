@@ -30,6 +30,7 @@ router.get('/', withAuth, (req, res) => {
     })
 });
 
+// issue with this?
 router.get('/:id', (req,res) => {
     Post.findOne({
         where: {
@@ -55,9 +56,8 @@ router.get('/:id', (req,res) => {
             res.status(404).json({ message: 'No post found with this id!' })
             return;
         }
-        const post = dbPostData.get({plain: true});
+        res.json(dbPostData)
 
-        res.render('post', {post, loggedIn: req.session.loggedIn})
     }) .catch(err => {
         console.log(err);
         res.status(500).json(err);
