@@ -5,18 +5,18 @@ const deleteFormHandler = async (event) => {
         window.location.toString().split('/').length - 1
     ];
     
-    const answer = await fetch(`/api/post/${id}`< {
+    const response = await fetch(`/api/posts/${id}`< {
         method: 'DELETE',
         body: JSON.stringify({
             post_id: id
         }),
         headers: {'Content-Type': 'application/json'}
     });
-    if(answer.ok) {
+    if(response.ok) {
         document.location.replace('/dashboard')
     } else {
         alert('Failed to delete.')
     }
 }
 
-document.querySelector('.delete-btn').addEventListener('submit', deleteFormHandler)
+document.querySelector('.form-edit-post').addEventListener('submit', deleteFormHandler)

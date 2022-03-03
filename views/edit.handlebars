@@ -12,3 +12,16 @@
         <button type="submit" class="delete-btn btn btn-primary"> Delete </button>
     </form>
 </div>
+
+<form class="comment">
+    <div class="form-group">
+            <textarea class="text-comment form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <button type="submit" class="comment-btn btn btn-primary"> Comment </button>
+</form>
+
+{{comments post.comments}}
+
+<script src="/js/edit-post.js"></script>
+<script src="/js/delete-post.js"></script>
+<script src="/js/comment.js"></script>

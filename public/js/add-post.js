@@ -4,7 +4,7 @@ const newPostFormHandler = async (event) => {
     const title = document.querySelector('.title-edit').value;
     const post = document.querySelector('.text-edit').value;
     
-    const answer = await fetch(`/api/post`, {
+    const response = await fetch(`/api/posts`, {
         method: 'POST',
         body: JSON.stringify({
             title, 
@@ -12,11 +12,11 @@ const newPostFormHandler = async (event) => {
         }),
         headers: {'Content-Type': 'application/json'}
     });
-    if(answer.ok) {
+    if(response.ok) {
         document.location.replace('/dashboard')
     } else {
         alert('Failed to add new post.')
     }
 }
 
-document.querySelector('.create-btn').addEventListener('submit', newPostFormHandler)
+document.querySelector('.form-new-post').addEventListener('submit', newPostFormHandler)

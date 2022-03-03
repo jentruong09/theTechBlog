@@ -1,10 +1,19 @@
 // all comment routes
 const router = require('express').Router();
-const {Post, User, Comment} = require('../../models')
+const {Comment} = require('../../models')
 const withAuth = require('../../utils/auth');
 
 router.get('/', (req,res) => {
-    Comment.findAll({})
+    Comment.findAll({
+    //     attributes: ['id', 'comment', 'post_id', 'user_id', 'created_at'],
+    //     order: [['created_at', 'DESC']],
+    //     include: [
+    //         {
+    //             model: User,
+    //             attributes: ['username']
+    //         }
+    //     ]
+    })
         .then(dbCommentData => res.json(dbCommentData))
         .catch(err => {
             console.log(err);

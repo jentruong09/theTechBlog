@@ -7,7 +7,7 @@ const editFormHandler = async (event) => {
         window.location.toString().split('/').length - 1
     ];
     
-    const answer = await fetch(`/api/post/${id}`, {
+    const response = await fetch(`/api/posts/${id}`, {
         method: 'PUT',
         body: JSON.stringify({
             title, 
@@ -15,11 +15,11 @@ const editFormHandler = async (event) => {
         }),
         headers: {'Content-Type': 'application/json'}
     });
-    if(answer.ok) {
+    if(response.ok) {
         document.location.replace('/dashboard')
     } else {
         alert('Failed to edit.')
     }
 }
 
-document.querySelector('.edit-btn').addEventListener('submit', editFormHandler)
+document.querySelector('.form-edit-post').addEventListener('submit', editFormHandler)
