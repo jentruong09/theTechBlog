@@ -34,6 +34,7 @@ router.get('/', withAuth, (req, res) => {
     })
 });
 
+
 router.get('/edit/:id', (req,res) => {
     Post.findOne({
         where: {
@@ -61,15 +62,12 @@ router.get('/edit/:id', (req,res) => {
         }
         const post = dbPostData.get({plain: true});
 
-        res.render('post', {post, loggedIn: req.session.loggedIn})
+        res.render('edit', {post, loggedIn: req.session.loggedIn})
     }) .catch(err => {
         console.log(err);
         res.status(500).json(err);
     })
 });
 
-router.get('/newpost', (req, res) => {
-    res.render('posting')
-});
 
 module.exports = router
