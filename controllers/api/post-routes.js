@@ -6,7 +6,7 @@ const withAuth = require('../../utils/auth');
 router.get('/', withAuth, (req, res) => {
     // find all posts
     Post.findAll({
-        attributes: ['id', 'title', 'post', 'created_at'],
+        attributes: ['id', 'title', 'post', 'user_id', 'created_at'],
         order: [['created_at', 'DESC']],
         include: [
             {
@@ -30,7 +30,9 @@ router.get('/', withAuth, (req, res) => {
     })
 });
 
+
 // issue with this?
+// getting one post with comments
 router.get('/:id', (req,res) => {
     Post.findOne({
         where: {
@@ -64,6 +66,7 @@ router.get('/:id', (req,res) => {
     })
 });
 
+
 router.post('/', withAuth, (req, res) => {
     Post.create({
         title: req.body.title,
@@ -83,7 +86,7 @@ router.put('/:id', withAuth, (req, res) => {
         post: req.body.post
     },
     {
-        wher: {
+        where: {
             id: req.params.id
         }
     }).then (dbPostData => {

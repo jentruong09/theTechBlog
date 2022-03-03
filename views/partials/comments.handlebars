@@ -1,4 +1,5 @@
 <div class="comments">
+    {{#each this}}
     <div class="single-comment">
         <div class="text">
             {{comment}}
@@ -7,4 +8,5 @@
             By {{user.username}} Posted on {{format_date created_at}}
         </div>
     </div>
+    {{/each}}
 </div>

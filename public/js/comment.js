@@ -1,7 +1,7 @@
 const commentFormHandler = async (event) => {
     event.preventDefault();
 
-    const comment = document.querySelector('.text-comment').ariaValueMax.trim()
+    const comment = document.querySelector('.text-comment').value.trim()
 
     const post_id = window.location.toString().split('/')[
         window.location.toString().split('/').length - 1
@@ -11,7 +11,8 @@ const commentFormHandler = async (event) => {
         method: 'POST',
         body: JSON.stringify({
             post_id,
-            comment
+            comment,
+            user_id
         }),
         headers: {
             'Content Type': 'application/json'
@@ -24,4 +25,4 @@ const commentFormHandler = async (event) => {
     }
 }
 
-document.querySelector('.comment').addEventListener('submit', commentFormHandler)
+document.querySelector('.comments').addEventListener('submit', commentFormHandler)
