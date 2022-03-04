@@ -3,7 +3,7 @@
 <br/>
 
 ## Project Description
-
+This is a blog where anyone interested about Tech can come and share their thoughts! Simply create a login and you are able to post and comment! Keep the email and password so you can always log in!
 
 
 <br/>
@@ -20,16 +20,21 @@
 ## Deployment
   
 
-[Repository]()
+[Repository](https://github.com/jentruong09/theTechBlog)
+
+
+<br/>
+
+[Live Deployment](https://hidden-lake-94539.herokuapp.com)
 
 <br/>
 
 ## Usage
-Please have npm express, dotenv, sequelize, and mysql2 installed before running the application. 
+Please have npm bcrypt, connect-session-sequelize, express, express-handlebars, express-session, handlebars, dotenv, sequelize, and mysql2 installed before running the application. 
 
-![]()
+![pic 1](/assets/techblog1.png)
 
-![]())
+![pic 2](/assets/techblog2.png)
 
 
 <br/>
@@ -39,13 +44,25 @@ Technologies Used in this project:
 
 Some codes are from class modules and were provided by: Trilogy Education Services, LLC, a 2U, Inc. brand.
   
+[npm bcrypt](https://www.npmjs.com/package/bcrypt)
+
+[npm connect-session-sequelize](https://www.npmjs.com/package/connect-session-sequelize)
+
 [npm express](https://www.npmjs.com/package/express)
+
+[npm express-handlebars](https://www.npmjs.com/package/express-handlebars)
+
+[npm express-session](https://www.npmjs.com/package/express-session)
+
+[npm handlebars](https://www.npmjs.com/package/handlebars)
 
 [npm dotenv](https://www.npmjs.com/package/dotenv)
 
 [npm sequelize](https://www.npmjs.com/package/sequelize)
 
 [npm mysql2](https://www.npmjs.com/package/mysql2)
+
+[Bootstrap](https://getbootstrap.com/)
 
 <br/>
 
