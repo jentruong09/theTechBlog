@@ -1,25 +1,34 @@
-const editFormHandler = async (event) => {
-    event.preventDefault();
+const editFormHandler = async function(event) {
+  event.preventDefault();
 
-    const title = document.querySelector('.title-edit').value;
-    const post = document.querySelector('.text-edit').value;
-    const id = window.location.toString().split('/')[
-        window.location.toString().split('/').length - 1
-    ];
-    
-    const response = await fetch(`/api/posts/${id}`, {
-        method: 'PUT',
-        body: JSON.stringify({
-            title, 
-            post
-        }),
-        headers: {'Content-Type': 'application/json'}
-    });
-    if(response.ok) {
-        document.location.replace('/dashboard')
-    } else {
-        alert('Failed to edit.')
+  const title = document.querySelector('input[name="post-title"]').value;
+  const post = document.querySelector('textarea[name="post-body"]').value;
+
+  await fetch(`/api/post/${id}`, {
+    method: 'PUT',
+    body: JSON.stringify({
+      title,
+      post
+    }),
+    headers: {
+      'Content-Type': 'application/json'
     }
-}
+  });
 
-document.querySelector('.form-edit-post').addEventListener('submit', editFormHandler)
+  document.location.replace('/dashboard');
+};
+
+const deleteClickHandler = async function() {
+  await fetch(`/api/post/${post_id}`, {
+    method: 'DELETE'
+  });
+
+  document.location.replace('/dashboard');
+};
+
+document
+  .querySelector('#edit-post-form')
+  .addEventListener('submit', editFormHandler);
+document
+  .querySelector('#delete-btn')
+  .addEventListener('click', deleteClickHandler);

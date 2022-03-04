@@ -7,7 +7,7 @@ router.get('/', withAuth, (req, res) => {
     // find all posts
     Post.findAll({
         attributes: ['id', 'title', 'post', 'user_id', 'created_at'],
-        order: [['created_at', 'DESC']],
+        order: [['created_at', 'ASC']],
         include: [
             {
                 model: Comment,
@@ -66,6 +66,17 @@ router.get('/:id', (req,res) => {
     })
 });
 
+// router.post('/', withAuth, async (req, res) => {
+//     const post = req.body.post;
+  
+//     try {
+//       const newPost = await Post.create({...post, user_id: req.session.user_id});
+//       res.json(newPost);
+//     } catch (err) {
+//       res.status(500).json(err);
+//     }
+//   });
+
 
 router.post('/', withAuth, (req, res) => {
     Post.create({
@@ -80,26 +91,37 @@ router.post('/', withAuth, (req, res) => {
 });
 
 
-router.put('/:id', withAuth, (req, res) => {
-    Post.update({
-        title: req.body.title,
-        post: req.body.post
-    },
-    {
-        where: {
-            id: req.params.id
-        }
-    }).then (dbPostData => {
-        if(!dbPostData) {
-            res.status(404).json({ message: 'No post found with this id!' })
-            return;
-        } res.json(dbPostData)
-    })
-    .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-    })    
-});
+// router.put('/:id', withAuth, (req, res) => {
+//     Post.update({
+//         title: req.body.title,
+//         post: req.body.post
+//     },
+//     {
+//         where: {
+//             id: req.params.id
+//         }
+//     }).then (dbPostData => {
+//         if(!dbPostData) {
+//             res.status(404).json({ message: 'No post found with this id!' })
+//             return;
+//         } res.json(dbPostData)
+//     })
+//     .catch(err => {
+//         console.log(err);
+//         res.status(500).json(err);
+//     })    
+// });
+
+router.post('/', withAuth, async (req, res) => {
+    const body = req.body;
+  
+    try {
+      const newPost = await Post.create({ ...body, user_id: req.session.user_id });
+      res.json(newPost);
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
 
 router.delete('/:id', withAuth, (req, res) => {
     Post.destroy({

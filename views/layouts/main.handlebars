@@ -13,7 +13,7 @@
 <body>
     <header>
         <div class="jumbotron jumbotron-fluid">
-            <div class="container">
+            <div class="container" id="header">
                 <h1 class="display-4">The Tech Blog</h1>
                 <p class="lead">Find the most up to date knowledge on Tech here!
                 </p>
@@ -21,11 +21,11 @@
         </div>
     </header>
     <nav>
-        <a href="/">Home</a>
-        <a href="/dashboard">Dashboard</a>
+        <a class="nav-item" href="/">Home</a>
+        <a class="nav-item" href="/dashboard">Dashboard</a>
         <!-- If the user is logged in, show a logout button -->
         {{#if loggedIn}}
-        <button id="logout" class="btn-no-style">Logout</button>
+        <button id="logout" class="nav-item btn btn-primary">Logout</button>
         {{else}}
         <!-- Otherwise, show a link to login -->
         <a href="/login">Login</a>

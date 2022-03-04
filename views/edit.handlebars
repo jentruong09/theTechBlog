@@ -1,27 +1,21 @@
 <div class="edit-post">
-    <a href="/dashboard"> Go back to Dashboard </a>
     <h3> Edit Post </h3>
-    <form class="form-edit-post">
+    <form class="form-edit-post" id="edit-post-form">
+        <input type="hidden" name="post-id" value="{{post.id}}" />
         <div class="form-group">
-            <input class="title-edit form-control" type="text">
+                <label class="form-label" for="post-title">Title</label>
+                <input type="text" name="post-title" value="{{post.title}}" class="form-input" />
         </div>
         <div class="form-group">
-            <textarea class="text-edit form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <label class="form-label" for="post-body">Content</label>
+            <textarea name="post-body" class="form-input">{{post.body}}</textarea>
         </div>
-        <button type="submit" class="edit-btn btn btn-primary"> Save </button>
-        <button type="submit" class="delete-btn btn btn-primary"> Delete </button>
+        
+    <button type="submit" class="btn">Update</button>
+    <button type="button" id="delete-btn" class="btn">Delete</button>
     </form>
 </div>
-
-<form class="comment">
-    <div class="form-group">
-            <textarea class="text-comment form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-    </div>
-    <button type="submit" class="comment-btn btn btn-primary"> Comment </button>
-</form>
 
 {{comments post.comments}}
 
 <script src="/js/edit-post.js"></script>
-<script src="/js/delete-post.js"></script>
-<script src="/js/comment.js"></script>

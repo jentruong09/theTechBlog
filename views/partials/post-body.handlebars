@@ -1,14 +1,16 @@
-<div class="card" style="width: 50rem;">
-    <div class="post-body card-body">
-        <div class="card-title">
-            <a href="/post/{{id}}">{{title}}</a>
-        </div>
-        <div class="card-text">
-            {{post}}
-        </div>
-        <br>
-        <div class="info card-subtitle text-muted">
-            By {{user.username}} Posted on {{format_date created_at}}
+<div class="container">
+    <div class="card">
+        <div class="post-body card-body">
+            <div class="card-title">
+                <a href="/post/{{id}}">{{title}}</a>
+            </div>
+            <div class="card-text">
+                {{post}}
+            </div>
+            <br>
+            <div class="info card-subtitle text-muted">
+                By {{user.username}} Posted on {{format_date created_at}}
+            </div>
         </div>
     </div>
 </div>

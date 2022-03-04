@@ -1,5 +1,14 @@
 .card {
+    margin-bottom: 30px;
+}
+
+nav {
+    text-align: center;
     margin-bottom: 20px;
+}
+
+.nav-item {
+    margin-right: 20px;
 }
 
 .card-title {
@@ -9,4 +18,24 @@
 .info {
     font-size: 15px;
     font-style: italic;
+}
+
+#all-posts {
+    margin-top: 20px;
+}
+
+.edit {
+    float: right;
+    margin-top: -63px;
+    margin-right: 30px;
+}
+
+#header {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.single-comment {
+    margin-bottom: 20px;
 }

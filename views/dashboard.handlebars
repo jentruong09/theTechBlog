@@ -1,23 +1,23 @@
-<div class="new-post">
+<div class="container new-post">
     <h3> New Post </h3>
-    <form class="form-new-post">
-        <div class="form-group">
+    <form id="new-post-form">
+        <div class="form-group" class="card-body">
             <label for="exampleFormControlTextarea1">Title</label>
-            <input class="form-control" type="text" placeholder="Your Title Here">
+            <input class="form-control" name="post-title" type="text" id="post-title" placeholder="Your Title Here">
         </div>
         <div class="form-group">
             <label for="exampleFormControlTextarea1">Your Post Here</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <textarea class="form-control" name="post-body" id="post-body" rows="3"></textarea>
         </div>
         <button type="submit" class="create-btn btn btn-primary"> Create Post </button>
     </form>
 </div>
 
-
-{{#if posts.length}}
-<div class="your-posts">
-    <ol>
-        <div class="card" style="width: 50rem;">
+<div class="container" id="all-posts">
+    {{#if posts.length}}
+    <h3> Previous Posts </h3>
+    <div class="your-posts ">
+        <div class="card justify-content-center">
             {{#each posts as |post|}}
             <ul>
                 <div class="post-body card-body">
@@ -28,16 +28,16 @@
                         By {{user.username}} Posted on {{format_date created_at}}
                     </div>
                 </div>
-                <button type="submit" href="/dashboard/edit/{{post.id}}" class="edit btn btn-primary">Edit</button>
+                <a  href="/dashboard/edit/{{post.id}}" class="edit">Edit</a>
             </ul>
             {{/each}}
         </div>
-    </ol>
+    </div>
+    {{/if}}
 </div>
-{{/if}}
 
-<div class="new-post">
+{{!-- <div class="new-post">
     <button type="submit" href="/dashboard/posting" class="create btn btn-primary"> + New Post </button>
-</div>
+</div> --}}
 
 <script src="/js/add-post.js"></script>

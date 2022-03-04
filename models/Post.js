@@ -16,7 +16,7 @@ Post.init(
             allowNull: false,
         },
         post: {
-            type: DataTypes.TEXT,
+            type: DataTypes.STRING,
             allowNull: false,
             validate: {
                 len: [5]

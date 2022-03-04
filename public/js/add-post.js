@@ -1,23 +1,21 @@
 const newPostFormHandler = async (event) => {
     event.preventDefault();
 
-    const title = document.querySelector('.title-edit').value.trim();
-    const post = document.querySelector('.text-edit').value.trim();
+    const title = document.querySelector('input[name="post-title"]').value.trim();
+    const post = document.querySelector('textarea[name="post-body"]').value.trim();
     
-    const response = await fetch('/api/posts', {
+    await fetch('/api/post', {
         method: 'POST',
         body: JSON.stringify({
-            title, 
-            post,
-            user_id
+          title,
+          post,
         }),
-        headers: {'Content-Type': 'application/json'}
-    });
-    if(response.ok) {
-        document.location.replace('/dashboard')
-    } else {
-        alert('Failed to add new post.')
-    }
+        headers: { 'Content-Type': 'application/json' },
+      });
+    
+      document.location.replace('/dashboard');
 }
 
-document.querySelector('.form-new-post').addEventListener('submit', newPostFormHandler)
+document
+  .querySelector('#new-post-form')
+  .addEventListener('submit', newPostFormHandler);
