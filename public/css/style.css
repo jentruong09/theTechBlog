@@ -1,12 +1,21 @@
+/* ------------ ALL PAGES STYLING START ------------*/
 * {
-    background-color: rgb(29, 28, 28);
+    background-color: #1f263e;
 }
+/* ------------ ALL PAGES STYLING END ------------*/
 
+
+/* ------------ HEADER + NAV STYLING START ------------*/
 .header-img {
     width: 700px;
     height: auto;
 }
 
+#header {
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
 
 nav {
     text-align: center;
@@ -27,15 +36,18 @@ nav a:link {
 }
 
 nav a:hover {
-    color: #00aa9b;
-}
-
-.post-title {
-    font-size: 20px
+    color: #635a90;
 }
 
 .nav-item {
     padding-right: 20px;
+}
+/* ------------ HEADER + NAV STYLING END ------------*/
+
+
+/* ------------ POST-BODY (HOME PAGE) STYLING START ------------*/
+.post-title {
+    font-size: 20px
 }
 
 .href {
@@ -54,39 +66,85 @@ nav a:hover {
     text-decoration: none;
 }
 
+.post-container {
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    width: 650px;
+    height: auto;
+}
+
+.post-card {
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+}
+
 .post-card:hover {
-    box-shadow: 0 0 5px #fff, 3px 3px 6px 3px #00aa9b;
+    box-shadow: 0 0 5px #fff, 3px 3px 6px 3px #090d15;
+    text-decoration: none;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+}
+
+.card-body:hover {
+    color: #635a90;
+}
+
+.card-body:link {
+    text-decoration: none;
+    
+}
+
+.card-body {
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border: 1px solid #2f404f;
 }
 
 .card {
+    border: none;
     margin-bottom: 30px;
+    border-radius: 7px;
 }
 
 .card-title {
     font-size: 25px;
+    text-align: center;
+}
+
+.card-text {
+    text-align: center;
 }
 
 .info {
-    font-size: 15px;
-    font-style: italic;
+    font-size: 12px;
+    
 }
 
 #all-posts {
     margin-top: 20px;
 }
+/* ------------ HEADER + NAV STYLING END ------------*/
 
+
+/* ------------ COMMENTS STYLING START ------------*/
+.single-comment {
+    margin-bottom: 20px;
+}
+/* ------------ COMMENTS STYLING END ------------*/
+
+
+/* ------------ EDIT PAGE STYLING START ------------*/
 .edit {
     float: right;
     padding-top: -63px;
     padding-right: 30px;
 }
+/* ------------ EDIT PAGE STYLING END ------------*/
 
-#header {
-    text-align: center;
-    padding-top: 60px;
-    padding-bottom: 60px;
-}
 
-.single-comment {
-    margin-bottom: 20px;
-}
+
+/*  Media Query */
