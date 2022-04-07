@@ -7,9 +7,6 @@
     height: auto;
 }
 
-.card {
-    margin-bottom: 30px;
-}
 
 nav {
     text-align: center;
@@ -33,9 +30,36 @@ nav a:hover {
     color: #00aa9b;
 }
 
+.post-title {
+    font-size: 20px
+}
 
 .nav-item {
     padding-right: 20px;
+}
+
+.href {
+    color: white;
+}
+
+.href:visited {
+    text-decoration: none;
+}
+
+.href:link {
+    text-decoration: none;
+}
+
+.href:hover {
+    text-decoration: none;
+}
+
+.post-card:hover {
+    box-shadow: 0 0 5px #fff, 3px 3px 6px 3px #00aa9b;
+}
+
+.card {
+    margin-bottom: 30px;
 }
 
 .card-title {
