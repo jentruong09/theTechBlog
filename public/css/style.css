@@ -1,14 +1,41 @@
+* {
+    background-color: rgb(29, 28, 28);
+}
+
+.header-img {
+    width: 700px;
+    height: auto;
+}
+
 .card {
     margin-bottom: 30px;
 }
 
 nav {
     text-align: center;
-    margin-bottom: 20px;
+    padding-bottom: 50px;
+    text-decoration: none;
 }
 
+nav a {
+    color: white;
+}
+
+nav a:visited {
+    text-decoration: none;
+}
+
+nav a:link {
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #00aa9b;
+}
+
+
 .nav-item {
-    margin-right: 20px;
+    padding-right: 20px;
 }
 
 .card-title {
@@ -26,14 +53,14 @@ nav {
 
 .edit {
     float: right;
-    margin-top: -63px;
-    margin-right: 30px;
+    padding-top: -63px;
+    padding-right: 30px;
 }
 
 #header {
     text-align: center;
-    margin-top: 60px;
-    margin-bottom: 60px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .single-comment {
