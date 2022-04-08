@@ -162,6 +162,11 @@ nav a:hover {
 .comment-btn {
     margin-top: 3px;
 }
+
+#comments-container {
+    width: 650px;
+}
+
 /* ------------ COMMENTS STYLING END ------------*/
 
 
@@ -240,10 +245,51 @@ ul {
 
 
 /* ------------ LOGIN STYLING START ------------*/
+.sign-up-link {
+    color: white;
+}
+
+.sign-up-link:visited {
+    text-decoration: none;
+}
+
+.sign-up-link:hover {
+    color: #635a90;
+}
+
+.sign-up-container {
+    width: 650px;
+}
+
+.login-btn {
+    margin-top: 5px;
+}
+
+/* ------------ LOGIN STYLING END ------------*/
 
 
+/* ------------ SIGN UP STYLING START ------------*/
+.login-link {
+    color: white;
+}
 
-/* ------------ LOGIN STYLING START ------------*/
+.login-link:visited {
+    text-decoration: none;
+}
 
+.login-link:hover {
+    color: #635a90;
+}
+
+.signup-container {
+    width: 650px;
+}
+
+.signup-btn {
+    margin-top: 5px;
+}
+
+
+/* ------------ SIGN UP STYLING END ------------*/
 
 /*  Media Query */
