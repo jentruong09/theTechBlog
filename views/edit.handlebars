@@ -1,18 +1,18 @@
-<div class="edit-post">
+<div class="container edit-post">
     <h3> Edit Post </h3>
     <form class="form-edit-post" id="edit-post-form">
         <input type="hidden" name="post-id" value="{{post.id}}" />
         <div class="form-group">
-                <label class="form-label" for="post-title">Title</label>
-                <input type="text" name="post-title" value="{{post.title}}" class="form-input" />
+                <label for="exampleFormControlTextarea1">Title</label>
+                <input class="edit-post-title form-control" type="text" name="post-title" value="{{post.title}}" class="form-input" />
         </div>
         <div class="form-group">
-            <label class="form-label" for="post-body">Content</label>
-            <textarea name="post-body" class="form-input">{{post.post}}</textarea>
+            <label class="edit-post-body form-label" for="post-body">Post Content</label>
+            <textarea name="post-body" class="form-control">{{post.post}}</textarea>
         </div>
         
-    <button type="submit" class="btn">Update</button>
-    <button type="button" id="delete-btn" class="btn">Delete</button>
+    <button type="submit" id="update-btn" class="btn btn-dark">Update</button>
+    <button type="button" id="delete-btn" class="btn btn-dark">Delete</button>
     </form>
 </div>
 
