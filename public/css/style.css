@@ -1,6 +1,7 @@
 /* ------------ ALL PAGES STYLING START ------------*/
 * {
     background-color: #1f263e;
+    color: white;
 }
 /* ------------ ALL PAGES STYLING END ------------*/
 
@@ -130,9 +131,39 @@ nav a:hover {
 /* ------------ HEADER + NAV STYLING END ------------*/
 
 
+/* ------------ SINGLE POST WITH COMMENTS STYLING START ------------*/
+.comment-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#comment-form {
+    width: 650px;
+    height: auto;
+}
+
+.previous-comments {
+    width: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ------------ SINGLE POST WITH COMMENTS STYLING START ------------*/
+
+
 /* ------------ COMMENTS STYLING START ------------*/
 .single-comment {
     margin-bottom: 20px;
+}
+
+.text {
+    margin-bottom: 3px;
+}
+
+.comment-btn {
+    margin-top: 3px;
 }
 /* ------------ COMMENTS STYLING END ------------*/
 
