@@ -11,6 +11,7 @@ This is a blog where anyone interested about Tech can come and share their thoug
 ## Table of Contents
 - [Deployment](#installation)
 - [Usage](#usage)
+- [Wireframe](#wireframe)
 - [Credits](#credits)
 - [License](#license)
 - [Questions](#questions)
@@ -25,7 +26,7 @@ This is a blog where anyone interested about Tech can come and share their thoug
 
 <br/>
 
-[Live Deployment](https://hidden-lake-94539.herokuapp.com)
+[Live Deployment](https://thetechbloggg.herokuapp.com)
 
 <br/>
 
@@ -36,8 +37,13 @@ Please have npm bcrypt, connect-session-sequelize, express, express-handlebars, 
 
 ![pic 2](/assets/techblog2.png)
 
+![pic 3](/assets/techblog3.png)
 
 <br/>
+
+## Wireframe
+
+![wireframe 1](/assets/wireframe.png)
 
 ## Credits
 Technologies Used in this project:
