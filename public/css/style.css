@@ -145,6 +145,7 @@ nav a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
 }
 
 /* ------------ SINGLE POST WITH COMMENTS STYLING START ------------*/
