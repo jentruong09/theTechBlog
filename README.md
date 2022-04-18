@@ -3,7 +3,7 @@
 <br/>
 
 ## Project Description
-This is a blog where anyone interested about Tech can come and share their thoughts! Simply create a login and you are able to post and comment! Keep the email and password so you can always log in!
+A blog web application where anyone interested about Tech can come and share their thoughts! Simply create a login and you are able to post and comment! Keep the email and password so you can always log in!
 
 
 <br/>
